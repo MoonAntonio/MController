@@ -58,16 +58,22 @@ namespace Pendulum.Controller
 		#endregion
 
 		#region Actualizadores
-
-		private void Update()
+		/// <summary>
+		/// <para>Actualizador de MController</para>
+		/// </summary>
+		private void Update()// Actualizador de MController
 		{
+			// Comprobamos si el animator esta
 			if (anim == true)
 			{
+				// Obtenemos las axis
 				axisX = Input.GetAxis("Horizontal");
 				axisY = Input.GetAxis("Vertical");
 
-				vel = axisX * axisX + axisY * axisY;
+				// Obtenemos la velocidad
+				vel = new Vector2(axisX,axisY).sqrMagnitude;
 
+				// Fijamos las animaciones
 				anim.SetFloat("vel",vel);
 				anim.SetFloat("dir", axisX, tempTime, Time.deltaTime);
 			}

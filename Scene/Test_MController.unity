@@ -997,6 +997,33 @@ GameObject:
   m_PrefabParentObject: {fileID: 1038534590022142, guid: 066a0874f1e672445b855d2819da341a,
     type: 2}
   m_PrefabInternal: {fileID: 1921700958}
+--- !u!114 &1921700960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921700959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db49304d7832e44b8a022fbd2c0952a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: 1
+  soloEnPlayMode: 1
+  svSeguidor:
+  - activado: 1
+    posicionOffset: {x: 0, y: 5, z: 0}
+    activarFixedRotacion: 1
+    fixedRotacion: {x: 90, y: 0, z: 0}
+    objetivo: {fileID: 1921700963}
+    distancia: 8
+    ortographic: 1
+    sceneViewIndex: 0
+--- !u!4 &1921700963 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4450023025450186, guid: 066a0874f1e672445b855d2819da341a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1921700958}
 --- !u!114 &1921700964
 MonoBehaviour:
   m_ObjectHideFlags: 0

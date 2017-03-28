@@ -9,3 +9,5 @@ Controlador de un personaje para el proyecto de TFG
 
 + [NGUI](http://www.tasharen.com/?page_id=140) - (Utilizado en la raiz del proyecto.)
 + [XboxCtrlrInput](https://github.com/JISyed/Unity-XboxCtrlrInput) - (Utilizado en la raiz del proyecto.)
++ Un escenario - (Utilizado el prot personal en raiz del proyecto.)
++ UI - Utilizado el del proyecto.

@@ -19,6 +19,59 @@ namespace Pendulum.Controller
 	[AddComponentMenu("Pendulum/Controller/MController")]
 	public class MController : MonoBehaviour 
 	{
+		#region Variables Privadas
+		/// <summary>
+		/// <para>Velocidad del personaje.</para>
+		/// </summary>
+		private float vel = 0.0f;											// Velocidad del personaje.
+		/// <summary>
+		/// <para>Axis horizontal.</para>
+		/// </summary>
+		private float axisX = 0.0f;											// Axis horizontal
+		/// <summary>
+		/// <para>Axis vertical.</para>
+		/// </summary>
+		private float axisY = 0.0f;											// Axis vertical
+		/// <summary>
+		/// <para>Animator del personaje.</para>
+		/// </summary>
+		private Animator anim;												// Animator del personaje
+		/// <summary>
+		/// <para>Tiempo en el que se actualizan las animaciones (MiniUpdate).</para>
+		/// </summary>
+		private float tempTime = 0.25f;                                     // Tiempo en el que se actualizan las animaciones
+		#endregion
 
+		#region Init
+		/// <summary>
+		/// <para>Iniciador de MController.</para>
+		/// </summary>
+		private void Start()// Iniciador de MController
+		{
+			anim = this.GetComponent<Animator>();
+
+			if (anim.layerCount >= 2)
+			{
+				anim.SetLayerWeight(1, 1);
+			}
+		}
+		#endregion
+
+		#region Actualizadores
+
+		private void Update()
+		{
+			if (anim == true)
+			{
+				axisX = Input.GetAxis("Horizontal");
+				axisY = Input.GetAxis("Vertical");
+
+				vel = axisX * axisX + axisY * axisY;
+
+				anim.SetFloat("vel",vel);
+				anim.SetFloat("dir", axisX, tempTime, Time.deltaTime);
+			}
+		}
+		#endregion
 	}
 }

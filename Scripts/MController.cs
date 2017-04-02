@@ -19,6 +19,9 @@ namespace Pendulum.Controller
 	[AddComponentMenu("Pendulum/Controller/MController")]
 	public class MController : MonoBehaviour 
 	{
+		// BUG Cuando el jugador esta un tiempo corriendo, al detenerse, sigue con cierta inercia rotando sobre su eje Y.
+		// (#1 GitHub issues) https://github.com/MoonAntonio/MController/issues/1
+
 		#region Variables Privadas
 		/// <summary>
 		/// <para>Velocidad del personaje.</para>
